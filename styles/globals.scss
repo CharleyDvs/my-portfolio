@@ -48,28 +48,9 @@ h1 {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 100vw;
   position: relative;
-  &.left {
-    &::before {
-      right: 0;
-    }
-  }
-  &::before {
-    content: '';
-    position: absolute;
-    width: 70%;
-    height: 2px;
-    top: 170px;
-    background-color: $light-secondary-color;
-    margin: 0 32px;
-  }
-  & .title-container {
-    position: absolute;
-    width: 40%;
-    right: 0;
-  }
 }
 
 @import './header';

@@ -15,9 +15,10 @@ header {
     .title-container {
       display: flex;
       justify-content: space-between;
-      max-width: 280px;
+      max-width: 300px;
       margin: 0 auto;
       margin: 0 auto;
+      font-family: $main-font;
       .title-separator {
         font-weight: 700;
         transform: scale(2);
