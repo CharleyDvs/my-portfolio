@@ -53,6 +53,9 @@ section {
   position: relative;
 }
 
+@import './sectionTitle';
+@import './sidemenu';
 @import './header';
 @import './about';
-@import './sectionTitle';
+@import './projects';
+@import './projectCard';
