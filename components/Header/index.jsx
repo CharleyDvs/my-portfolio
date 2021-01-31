@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { gsap } from 'gsap'
 
 const Header = () => {
@@ -44,6 +45,7 @@ const Header = () => {
 
   return (
     <header>
+      <div className="bg-container"></div>
       <div className="txt-container">
         <div ref={(node) => (headerText1 = node)} className="secondary-color">
           <h1>Jaime</h1>
@@ -65,6 +67,9 @@ const Header = () => {
             <span>Mechanical Engineer</span>
           </div>
         </div>
+      </div>
+      <div className="img-container">
+        <Image src="/images/hawk-1.png" width="400px" height="400px" alt="" />
       </div>
     </header>
   )

@@ -1,87 +1,200 @@
 .project-container-wrap {
-  transition: $ease;
   &:hover {
     filter: drop-shadow(10px 10px $secondary-color);
   }
+  .project-container {
+    width: 200px;
+    height: 300px;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    img {
+      transition: $ease;
+    }
+    &:hover {
+      img {
+        transform: translate(35px, -24px) scale(1.1);
+      }
+    }
+    .project-content {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 500px;
+      background-color: transparent;
+      color: $main-bg-color;
+      position: relative;
+      .project-img-container {
+        position: relative;
+        width: 220px;
+        height: 320px;
+        background-image: url('../public/images/cylinder-bg.jpg');
+        background-size: cover;
+        background-position: center center;
+        overflow: hidden;
+        .filter {
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          height: 100%;
+          width: 100%;
+          transition: $ease;
+        }
+        h1 {
+          position: absolute;
+          bottom: 10%;
+          left: 50px;
+          color: $secondary-color;
+          opacity: 0;
+          transition: $ease;
+        }
+        .img-container {
+          position: absolute;
+          bottom: 20%;
+          right: -70px;
+          width: 250px;
+        }
+        &:hover {
+          .filter {
+            background-color: rgba($color: $white-color, $alpha: 0.2);
+            backdrop-filter: blur(4px);
+          }
+          h1 {
+            opacity: 1;
+          }
+        }
+      }
+      .project-info-container {
+        width: 0;
+        display: none;
+        .info-title,
+        p,
+        button {
+          opacity: 0;
+          transition: $ease;
+        }
+        .info-title {
+          color: $secondary-color;
+        }
+      }
+    }
+    &.active {
+      position: absolute;
+      min-height: 80%;
+      width: 90%;
+      z-index: 20;
+    }
+  }
   &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba($color: #000000, $alpha: 0.7);
+    backdrop-filter: blur(15px);
+    transition: $ease;
     z-index: 20;
     &:hover {
       filter: none;
     }
+    .project-container {
+      width: 85%;
+      pointer-events: none;
+      transition: $ease;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      &:hover {
+        img {
+          transform: translate(0) scale(1);
+        }
+      }
+      .project-content {
+        background-color: $white-color;
+        width: 100%;
+      }
+      .project-img-container {
+        height: 100%;
+        width: 50%;
+        .img-container {
+          transform: scale(1.3);
+          right: 0;
+        }
+      }
+      .project-info-container {
+        display: flex;
+        flex-direction: column;
+        margin: 42px;
+        width: 100%;
+        position: relative;
+        .info-title {
+          animation: text-appear;
+          animation-duration: 0.5s;
+          animation-delay: 0.5s;
+          animation-fill-mode: forwards;
+        }
+        p,
+        button {
+          font-family: $main-font;
+          animation: text-appear;
+          animation-duration: 0.5s;
+          animation-delay: 0.7s;
+          animation-fill-mode: forwards;
+        }
+        .tech-stack-list {
+          height: 120px;
+        }
+        .btn-container {
+          width: 500px;
+          margin: 0 auto;
+          button {
+            margin: 0 16px;
+            background-color: transparent;
+            border: 2px solid $secondary-color;
+            color: $secondary-color;
+            height: 48px;
+            width: 120px;
+            transition: $ease;
+            pointer-events: all;
+            cursor: pointer;
+            &:hover {
+              background-color: $secondary-color;
+              color: $white-color;
+            }
+          }
+        }
+        .back-btn {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          bottom: 16px;
+          right: 16px;
+          color: $secondary-color;
+          pointer-events: all;
+          opacity: 0.5;
+          transition: $ease;
+          cursor: pointer;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 }
-.project-container {
-  width: 200px;
-  height: 300px;
-  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
-  transition: $ease;
-  position: relative;
-  cursor: pointer;
-  img {
-    transition: $ease;
-    transform: translate(50px, 0px);
+
+@keyframes text-appear {
+  0% {
+    transform: translateX(-90px);
   }
-  &:hover {
-    img {
-      transform: translate(45px, -16px) scale(1.1);
-    }
-  }
-  .project-content {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 500px;
-    background-color: $white-color;
-    color: $main-bg-color;
-    position: relative;
-    .project-img-container {
-      position: relative;
-      width: 220px;
-      height: 320px;
-      background-image: url('../public/images/cylinder-bg.jpg');
-      background-size: cover;
-      background-position: center center;
-      .filter {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        transition: $ease;
-      }
-      h1 {
-        position: absolute;
-        bottom: 10%;
-        left: 50px;
-        color: $secondary-color;
-        opacity: 0;
-        transition: $ease;
-      }
-      &:hover {
-        .filter {
-          background-color: rgba($color: $white-color, $alpha: 0.2);
-          backdrop-filter: blur(4px);
-        }
-        h1 {
-          opacity: 1;
-        }
-      }
-    }
-    .project-info-container {
-      width: 0;
-      display: none;
-    }
-  }
-  &.active {
-    position: absolute;
-    min-height: 80%;
-    width: 90%;
-    z-index: 20;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Head>
         <meta http-equiv="content-language" content="en" />
-        <title>Jaime Yerena | Desarrollador Web</title>
+        <title>Jaime Yerena | Web developer</title>
       </Head>
       <main>
         <Sidemenu />

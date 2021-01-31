@@ -41,7 +41,7 @@
       }
       .link-text {
         position: absolute;
-        transform: skewY(15deg) translateX(40%);
+        transform: skewY(15deg) translateX(40%) scale(0.5);
         color: $secondary-color;
         top: 5px;
         font-size: 2rem;
