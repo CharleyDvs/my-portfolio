@@ -30,7 +30,6 @@
         position: relative;
         width: 220px;
         height: 320px;
-        background-image: url('../public/images/cylinder-bg.jpg');
         background-size: cover;
         background-position: center center;
         overflow: hidden;
@@ -43,12 +42,14 @@
           transition: $ease;
         }
         h1 {
+          font-size: 16px;
           position: absolute;
           bottom: 10%;
           left: 50px;
           color: $secondary-color;
           opacity: 0;
           transition: $ease;
+          max-width: 80%;
         }
         .img-container {
           position: absolute;

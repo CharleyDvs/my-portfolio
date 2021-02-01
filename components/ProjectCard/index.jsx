@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { FaBackward } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { FaRegWindowMaximize } from 'react-icons/fa'
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  title,
+  imageLogo,
+  cardBg,
+  text,
+  siteUrl,
+  repositoryUrl,
+}) => {
   const [isActive, setIsActive] = useState(false)
   const handleClick = () => {
     setIsActive(!isActive)
@@ -18,42 +24,42 @@ const ProjectCard = () => {
         onClick={handleClick}
       >
         <div className="project-content">
-          <div className="project-img-container">
+          <div
+            className="project-img-container"
+            style={{
+              backgroundImage: `url('./images/${cardBg}')`,
+            }}
+          >
             <div className="filter">
-              <h1>Project 1</h1>
+              <h1>{title}</h1>
               <div className="img-container">
                 <Image
-                  src="/images/cylinder-smc.png"
-                  width="250px"
-                  height="165px"
-                  alt=""
+                  src={imageLogo.src}
+                  width={imageLogo.width}
+                  height={imageLogo.height}
+                  alt={imageLogo.alt}
                 />
               </div>
             </div>
           </div>
           <div className="project-info-container">
-            <h1 className="info-title">Project 1</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-              vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex
-              mollitia animi officia obcaecati, ullam error similique sunt amet
-              repellendus, eius nisi.
-            </p>
+            <h1 className="info-title">{title}</h1>
+            <p>{text}</p>
             <h2 className="info-title">Technologies used:</h2>
             <div className="tech-stack-list"></div>
             <div className="btn-container">
-              <Link href="#">
+              <a target="_blank" href={siteUrl}>
                 <button>
                   <FaRegWindowMaximize />
                   Visit site
                 </button>
-              </Link>
-              <Link href="#">
+              </a>
+              <a target="_blank" href={repositoryUrl}>
                 <button>
                   <FaGithub />
                   View code
                 </button>
-              </Link>
+              </a>
             </div>
             <div className="back-btn" onClick={handleClick}>
               <FaBackward className="back" />
