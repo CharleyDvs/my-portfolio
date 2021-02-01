@@ -12,23 +12,23 @@ const Sidemenu = () => {
   return (
     <nav className="sidemenu">
       <ul>
-        <li onClick={() => router.push('/')}>
+        <li onClick={() => router.push('/#home')}>
           <GiCastle />
           <div className="link-text">Home</div>
         </li>
-        <li>
+        <li onClick={() => router.push('/#about-me')}>
           <GiVisoredHelm />
           <div className="link-text">About me</div>
         </li>
-        <li>
+        <li onClick={() => router.push('/#projects')}>
           <FaCogs />
           <div className="link-text">My projects</div>
         </li>
-        <li>
+        <li onClick={() => router.push('/#tech-stack')}>
           <GiSwordsEmblem />
           <div className="link-text">Tech stack</div>
         </li>
-        <li>
+        <li onClick={() => router.push('/#contact')}>
           <FaFeatherAlt />
           <div className="link-text">Contact me</div>
         </li>

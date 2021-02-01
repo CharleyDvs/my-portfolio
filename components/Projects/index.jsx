@@ -7,7 +7,7 @@ import { FaCog } from 'react-icons/fa'
 
 const Projects = () => {
   return (
-    <section className="projects right">
+    <section id="projects" className="projects right">
       <TitleContainer number="02" text1="My" text2="Projects" />
       <div className="section-content">
         <div className="content-controls">

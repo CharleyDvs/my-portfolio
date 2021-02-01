@@ -44,7 +44,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header>
+    <header id="home">
       <div className="bg-container"></div>
       <div className="txt-container">
         <div ref={(node) => (headerText1 = node)} className="secondary-color">
