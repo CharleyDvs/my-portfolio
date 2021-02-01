@@ -1,100 +1,43 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TitleContainer from '../TitleContainer'
 import ProjectCard from '../ProjectCard'
+import Spinner from '../Spinner'
+import Axios from 'axios'
 
 import { FaCode } from 'react-icons/fa'
 import { FaCog } from 'react-icons/fa'
-
-const webProjects = [
-  {
-    title: 'Cylinder Homologation',
-    imageLogo: {
-      src: '/images/cylinder-smc.png',
-      width: '250px',
-      height: '165px',
-      alt: 'Cilindro neumático',
-    },
-    cardBg: 'cylinder-bg.jpg',
-    text:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
-    siteUrl: '/#',
-    repositoryUrl: '/#',
-  },
-  {
-    title: 'Html Generator',
-    imageLogo: {
-      src: '/images/cylinder-smc.png',
-      width: '250px',
-      height: '165px',
-      alt: 'Cilindro neumático',
-    },
-    cardBg: 'cylinder-bg.jpg',
-    text:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
-    siteUrl: '/#',
-    repositoryUrl: '/#',
-  },
-  {
-    title: 'Project 3',
-    imageLogo: {
-      src: '/images/cylinder-smc.png',
-      width: '250px',
-      height: '165px',
-      alt: 'Cilindro neumático',
-    },
-    cardBg: 'cylinder-bg.jpg',
-    text:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
-    siteUrl: '/#',
-    repositoryUrl: '/#',
-  },
-]
-const engineeringProjects = [
-  {
-    title: 'Project 1',
-    imageLogo: {
-      src: '/images/cylinder-smc.png',
-      width: '250px',
-      height: '165px',
-      alt: 'Cilindro neumático',
-    },
-    cardBg: 'cylinder-bg.jpg',
-    text:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
-    siteUrl: '/#',
-    repositoryUrl: '/#',
-  },
-  {
-    title: 'Project 2',
-    imageLogo: {
-      src: '/images/cylinder-smc.png',
-      width: '250px',
-      height: '165px',
-      alt: 'Cilindro neumático',
-    },
-    cardBg: 'cylinder-bg.jpg',
-    text:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
-    siteUrl: '/#',
-    repositoryUrl: '/#',
-  },
-]
+import axios from 'axios'
 
 const Projects = () => {
-  const [projects, setProjects] = useState('web')
+  const [projectsDisplayed, setProjectsDisplayed] = useState('web')
+  const [projectsData, setProjectsData] = useState({})
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    const getInitialData = async () => {
+      try {
+        const response = await axios.get(
+          'http://localhost:3000/api/projectsData'
+        )
+        const data = response.data
+        setProjectsData(data)
+        setLoading(false)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getInitialData()
+  }, [])
   const handleWebBtnClick = () => {
     if (projects === 'web') {
       return
     }
-    setProjects('web')
-    console.log(projects)
+    setProjectsDisplayed('web')
   }
   const handleEngineeringBtnClick = () => {
     if (projects === 'engineering') {
       return
     }
-    setProjects('engineering')
-    console.log(projects)
+    setProjectsDisplayed('engineering')
   }
   return (
     <section id="projects" className="projects right">
@@ -112,15 +55,21 @@ const Projects = () => {
             <FaCog /> Engineering
           </button>
         </div>
-        <div className={`project-list`}>
-          {projects === 'web'
-            ? webProjects.map((project) => (
-                <ProjectCard key={project.title} {...project} />
-              ))
-            : engineeringProjects.map((project) => (
-                <ProjectCard key={project.title} {...project} />
-              ))}
-        </div>
+        {loading ? (
+          <div className="project-list">
+            <Spinner />
+          </div>
+        ) : (
+          <div className="project-list">
+            {projectsDisplayed === 'web'
+              ? projectsData.webProjects.map((project) => (
+                  <ProjectCard key={project.title} {...project} />
+                ))
+              : projectsData.engineeringProjects.map((project) => (
+                  <ProjectCard key={project.title} {...project} />
+                ))}
+          </div>
+        )}
       </div>
     </section>
   )
