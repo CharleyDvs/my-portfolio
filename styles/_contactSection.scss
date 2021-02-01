@@ -10,9 +10,15 @@
       height: 65vh;
       width: 100vw;
       background-image: url('../public/images/contact-bg.jpg');
-      background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: bottom left;
+      background-size: auto;
+    }
+    .img-container {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      z-index: 3;
     }
   }
 }
