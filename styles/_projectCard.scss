@@ -159,10 +159,15 @@
             border: 2px solid $secondary-color;
             color: $secondary-color;
             height: 48px;
-            width: 120px;
+            width: 140px;
             transition: $ease;
             pointer-events: all;
+            position: relative;
             cursor: pointer;
+            svg {
+              transform: scale(2);
+              margin: 0 16px;
+            }
             &:hover {
               background-color: $secondary-color;
               color: $white-color;

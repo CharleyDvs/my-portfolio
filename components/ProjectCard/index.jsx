@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { FaBackward } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { FaRegWindowMaximize } from 'react-icons/fa'
 
 const ProjectCard = () => {
   const [isActive, setIsActive] = useState(false)
@@ -41,10 +43,16 @@ const ProjectCard = () => {
             <div className="tech-stack-list"></div>
             <div className="btn-container">
               <Link href="#">
-                <button>Visit site</button>
+                <button>
+                  <FaRegWindowMaximize />
+                  Visit site
+                </button>
               </Link>
               <Link href="#">
-                <button>View code</button>
+                <button>
+                  <FaGithub />
+                  View code
+                </button>
               </Link>
             </div>
             <div className="back-btn" onClick={handleClick}>

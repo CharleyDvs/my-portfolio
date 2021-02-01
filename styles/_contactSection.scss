@@ -1,0 +1,18 @@
+.contact {
+  .section-content {
+    display: flex;
+    justify-content: flex-end;
+    height: 65%;
+    width: 100%;
+    position: relative;
+    .bg-container {
+      position: absolute;
+      height: 65vh;
+      width: 100vw;
+      background-image: url('../public/images/contact-bg.jpg');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: bottom left;
+    }
+  }
+}
