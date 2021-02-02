@@ -1,13 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 
-function TechList({ logoList }) {
+function TechList({ logoList, keyGen }) {
   return (
     <div className="tech-list">
       {logoList.map((logo) => (
-        <div className="img-container">
+        <div key={`${keyGen}-${logo.name}`} className="img-container">
           <Image
-            key={logo.id}
             src={`/logos/${logo.name}-logo.svg`}
             height={logo.height}
             width="auto"

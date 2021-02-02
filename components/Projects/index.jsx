@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import TitleContainer from '../TitleContainer'
 import ProjectCard from '../ProjectCard'
 import Spinner from '../Spinner'
-import Axios from 'axios'
 
 import { FaCode } from 'react-icons/fa'
 import { FaCog } from 'react-icons/fa'
-import axios from 'axios'
 
 const Projects = () => {
   const [projectsDisplayed, setProjectsDisplayed] = useState('web')
@@ -14,18 +13,16 @@ const Projects = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     const getInitialData = async () => {
-      try {
-        const response = await axios.get(
-          'http://localhost:3000/api/projectsData'
-        )
-        const data = response.data
-        setProjectsData(data)
-        setLoading(false)
-      } catch (error) {
-        console.log(error)
-      }
+      const response = await axios.get('http://localhost:3000/api/projectsData')
+      const data = response.data
+      setProjectsData(data)
+      setLoading(false)
     }
-    getInitialData()
+    try {
+      getInitialData()
+    } catch (error) {
+      console.error(error)
+    }
   }, [])
   const handleWebBtnClick = () => {
     if (projects === 'web') {

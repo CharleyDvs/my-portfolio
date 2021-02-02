@@ -1,6 +1,9 @@
 .tech-stack {
   display: flex;
   flex-direction: column;
+  .spinner {
+    margin: auto;
+  }
   .tech-list {
     display: flex;
     height: 200px;
