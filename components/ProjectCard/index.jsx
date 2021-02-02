@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import TechList from '../TechList'
 
 import { FaBackward } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { FaRegWindowMaximize } from 'react-icons/fa'
+import { FaWrench } from 'react-icons/fa'
 
 const ProjectCard = ({
   title,
   imageLogo,
   cardBg,
   text,
+  techList,
   siteUrl,
   repositoryUrl,
+  projectType,
 }) => {
   const [isActive, setIsActive] = useState(false)
   const handleClick = () => {
@@ -45,22 +49,37 @@ const ProjectCard = ({
           <div className="project-info-container">
             <h1 className="info-title">{title}</h1>
             <p>{text}</p>
-            <h2 className="info-title">Technologies used:</h2>
-            <div className="tech-stack-list"></div>
-            <div className="btn-container">
-              <a target="_blank" href={siteUrl}>
-                <button>
-                  <FaRegWindowMaximize />
-                  Visit site
-                </button>
-              </a>
-              <a target="_blank" href={repositoryUrl}>
-                <button>
-                  <FaGithub />
-                  View code
-                </button>
-              </a>
-            </div>
+            {projectType === 'web' ? (
+              <>
+                <h2 className="info-title">Technologies used:</h2>
+                <div className="tech-stack-list">
+                  <TechList logoList={techList} keyGen={name} />
+                </div>
+                <div className="btn-container">
+                  <a target="_blank" href={siteUrl}>
+                    <button>
+                      <FaRegWindowMaximize />
+                      Visit site
+                    </button>
+                  </a>
+                  <a target="_blank" href={repositoryUrl}>
+                    <button>
+                      <FaGithub />
+                      View code
+                    </button>
+                  </a>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="btn-container">
+                  <button>
+                    <FaWrench />
+                    View diagram
+                  </button>
+                </div>
+              </>
+            )}
             <div className="back-btn" onClick={handleClick}>
               <FaBackward className="back" />
               <span>Go back</span>

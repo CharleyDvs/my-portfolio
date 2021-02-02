@@ -149,18 +149,34 @@
           animation-fill-mode: forwards;
         }
         .tech-stack-list {
-          height: 120px;
+          height: 100px;
+          width: 80%;
+          overflow: hidden;
+          .tech-list {
+            display: flex;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+            .img-container {
+              margin: 0;
+              span {
+                display: none;
+              }
+            }
+          }
         }
         .btn-container {
-          width: 500px;
-          margin: 0 auto;
+          display: flex;
+          width: auto;
+          height: 48px;
+          margin: 48px auto;
           button {
             margin: 0 16px;
             background-color: transparent;
             border: 2px solid $secondary-color;
             color: $secondary-color;
             height: 48px;
-            width: 140px;
+            width: 160px;
             transition: $ease;
             pointer-events: all;
             position: relative;

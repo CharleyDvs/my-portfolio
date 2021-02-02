@@ -60,10 +60,18 @@ const Projects = () => {
           <div className="project-list">
             {projectsDisplayed === 'web'
               ? projectsData.webProjects.map((project) => (
-                  <ProjectCard key={project.title} {...project} />
+                  <ProjectCard
+                    key={project.title}
+                    projectType={projectsDisplayed}
+                    {...project}
+                  />
                 ))
               : projectsData.engineeringProjects.map((project) => (
-                  <ProjectCard key={project.title} {...project} />
+                  <ProjectCard
+                    key={project.title}
+                    projectType={projectsDisplayed}
+                    {...project}
+                  />
                 ))}
           </div>
         )}

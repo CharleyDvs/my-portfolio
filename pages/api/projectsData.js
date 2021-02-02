@@ -13,6 +13,20 @@ export default (req, res) => {
         cardBg: 'cylinder-bg.jpg',
         text:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
+        techList: [
+          {
+            name: 'html5',
+            height: '50px',
+          },
+          {
+            name: 'css3',
+            height: '50px',
+          },
+          {
+            name: 'javascript',
+            height: '50px',
+          },
+        ],
         siteUrl: '/#',
         repositoryUrl: '/#',
       },
@@ -27,6 +41,20 @@ export default (req, res) => {
         cardBg: 'cylinder-bg.jpg',
         text:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
+        techList: [
+          {
+            name: 'html5',
+            height: '50px',
+          },
+          {
+            name: 'css3',
+            height: '50px',
+          },
+          {
+            name: 'javascript',
+            height: '50px',
+          },
+        ],
         siteUrl: '/#',
         repositoryUrl: '/#',
       },
@@ -41,6 +69,20 @@ export default (req, res) => {
         cardBg: 'cylinder-bg.jpg',
         text:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
+        techList: [
+          {
+            name: 'html5',
+            height: '50px',
+          },
+          {
+            name: 'css3',
+            height: '50px',
+          },
+          {
+            name: 'javascript',
+            height: '50px',
+          },
+        ],
         siteUrl: '/#',
         repositoryUrl: '/#',
       },
