@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({})
@@ -11,7 +11,11 @@ const ContactForm = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
+    axios({
+      method: 'post',
+      url: 'htttps://localhost:3000/api/sendData',
+      data: formData,
+    })
   }
   return (
     <form onSubmit={(e) => handleSubmit(e)}>

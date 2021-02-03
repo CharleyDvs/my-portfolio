@@ -4,8 +4,6 @@ import TitleContainer from '../TitleContainer'
 import TechList from '../TechList'
 import Spinner from '../Spinner'
 
-import { scrubHorizontal } from '../../animations'
-
 const Techs = () => {
   const [loading, setLoading] = useState(true)
   const [techStackData, setTechStackData] = useState({})
