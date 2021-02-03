@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { gsap } from 'gsap'
+
+import { initialAnimation, scrubHorizontal } from '../../animations'
 
 const Header = () => {
   let headerText1 = useRef(null)
@@ -8,44 +9,23 @@ const Header = () => {
   let titleText1 = useRef(null)
   let titleText2 = useRef(null)
   let titleSeparator = useRef(null)
+  let hawkImg = useRef(null)
+  let bgImg = useRef(null)
 
   useEffect(() => {
-    gsap.from(headerText1, {
-      opacity: 0,
-      x: -150,
-      duration: 1,
-      rotate: 20,
-      ease: 'power3',
+    initialAnimation({
+      headerText1,
+      headerText2,
+      titleText1,
+      titleText2,
+      titleSeparator,
     })
-    gsap.from(headerText2, {
-      opacity: 0,
-      x: 150,
-      duration: 1,
-      rotate: -20,
-      ease: 'power3',
-    })
-    gsap.to(titleSeparator, {
-      delay: 1,
-      duration: 0.7,
-      rotate: 10,
-    })
-    gsap.from(titleText1, {
-      delay: 1,
-      duration: 0.5,
-      opacity: 0,
-      x: -50,
-    })
-    gsap.from(titleText2, {
-      delay: 1,
-      duration: 0.5,
-      opacity: 0,
-      x: 50,
-    })
+    scrubHorizontal(hawkImg, 1, -100)
   }, [])
 
   return (
     <header id="home">
-      <div className="bg-container"></div>
+      <div ref={(node) => (bgImg = node)} className="bg-container"></div>
       <div className="txt-container">
         <div ref={(node) => (headerText1 = node)} className="secondary-color">
           <h1>Jaime</h1>
@@ -68,7 +48,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="img-container">
+      <div ref={(node) => (hawkImg = node)} className="img-container">
         <Image src="/images/hawk-1.png" width="400px" height="400px" alt="" />
       </div>
     </header>

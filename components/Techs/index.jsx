@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import TitleContainer from '../TitleContainer'
 import TechList from '../TechList'
 import Spinner from '../Spinner'
 
+import { scrubHorizontal } from '../../animations'
+
 const Techs = () => {
   const [loading, setLoading] = useState(true)
   const [techStackData, setTechStackData] = useState({})
+
   useEffect(() => {
     const getInitialData = async () => {
       const response = await axios.get(
@@ -29,7 +32,7 @@ const Techs = () => {
         <Spinner />
       ) : (
         <>
-          {Object.keys(techStackData).map((row) => (
+          {Object.keys(techStackData).map((row, index) => (
             <TechList
               key={row.toString()}
               logoList={techStackData[row]}

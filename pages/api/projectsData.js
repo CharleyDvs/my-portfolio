@@ -27,8 +27,8 @@ export default (req, res) => {
             height: '50px',
           },
         ],
-        siteUrl: '/#',
-        repositoryUrl: '/#',
+        siteUrl: 'https://charleydvs.github.io/Cylinder-homologation/',
+        repositoryUrl: 'https://github.com/CharleyDvs/Cylinder-homologation',
       },
       {
         title: 'Html Generator',
@@ -43,15 +43,15 @@ export default (req, res) => {
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
         techList: [
           {
-            name: 'html5',
+            name: 'nextjs',
             height: '50px',
           },
           {
-            name: 'css3',
+            name: 'react',
             height: '50px',
           },
           {
-            name: 'javascript',
+            name: 'sass',
             height: '50px',
           },
         ],

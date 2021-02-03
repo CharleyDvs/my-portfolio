@@ -15,7 +15,7 @@ export default (req, res) => {
         height: '150px',
       },
       {
-        name: 'github',
+        name: 'sass',
         height: '150px',
       },
     ],
@@ -48,6 +48,10 @@ export default (req, res) => {
       },
       {
         name: 'firebase',
+        height: '150px',
+      },
+      {
+        name: 'github',
         height: '150px',
       },
     ],
