@@ -13,9 +13,10 @@ header {
     bottom: 0;
     right: 30%;
     z-index: 10;
+    transition: all ease;
   }
   .bg-container {
-    width: 110vw;
+    width: 1600px;
     height: 100vh;
     position: absolute;
     background-image: url('../public/images/main-bg.jpg');

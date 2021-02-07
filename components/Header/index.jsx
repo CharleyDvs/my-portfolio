@@ -1,30 +1,77 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+import { motion } from 'framer-motion'
+import { animationVariants } from '../../animations/animationVariants'
+
 const Header = () => {
+  const [scroll, setScroll] = useState(0)
+  useEffect(() => {
+    const handleScroll = () => {
+      const yOffset = window.pageYOffset
+      if (scroll < 500) {
+        setScroll(yOffset)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <header id="home">
       <div className="bg-container"></div>
-      <div className="txt-container">
-        <div className="secondary-color">
+      <div className="txt-container" style={{ opacity: `${1 - scroll / 400}` }}>
+        <motion.div
+          variants={animationVariants}
+          initial="hiddenFront"
+          animate="show"
+          transition={animationVariants.ease(0.3)}
+          className="secondary-color"
+        >
           <h1>Jaime</h1>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          variants={animationVariants}
+          initial="hiddenFront"
+          animate="show"
+          transition={animationVariants.ease(0.6)}
+        >
           <h1>Yerena</h1>
-        </div>
+        </motion.div>
         <div className="title-container">
-          <div className="title-one">
+          <motion.div
+            variants={animationVariants}
+            initial="hiddenLeft"
+            animate="show"
+            transition={animationVariants.ease(0.9)}
+            className="title-one"
+          >
             <span>Web Developer</span>
-          </div>
-          <div className="title-separator secondary-color">
+          </motion.div>
+          <motion.div
+            variants={animationVariants}
+            style={{ skewX: 15 }}
+            transition={animationVariants.ease(1.2)}
+            className="title-separator secondary-color"
+          >
             <span>|</span>
-          </div>
-          <div className="title-Two">
+          </motion.div>
+          <motion.div
+            variants={animationVariants}
+            initial="hiddenRight"
+            animate="show"
+            transition={animationVariants.ease(1.5)}
+            className="title-Two"
+          >
             <span>Mechanical Engineer</span>
-          </div>
+          </motion.div>
         </div>
       </div>
-      <div className="img-container">
+      <div
+        className="img-container"
+        style={{ right: `${30 + scroll * 0.025}%` }}
+      >
         <Image src="/images/hawk-1.png" width="400px" height="400px" alt="" />
       </div>
     </header>

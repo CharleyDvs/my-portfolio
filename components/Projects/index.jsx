@@ -59,17 +59,19 @@ const Projects = () => {
         ) : (
           <div className="project-list">
             {projectsDisplayed === 'web'
-              ? projectsData.webProjects.map((project) => (
+              ? projectsData.webProjects.map((project, index) => (
                   <ProjectCard
                     key={project.title}
                     projectType={projectsDisplayed}
+                    delayValue={index * 0.2}
                     {...project}
                   />
                 ))
-              : projectsData.engineeringProjects.map((project) => (
+              : projectsData.engineeringProjects.map((project, index) => (
                   <ProjectCard
                     key={project.title}
                     projectType={projectsDisplayed}
+                    delayValue={index * 0.2}
                     {...project}
                   />
                 ))}
