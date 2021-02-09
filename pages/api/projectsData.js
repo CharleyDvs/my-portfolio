@@ -11,8 +11,7 @@ export default (req, res) => {
           alt: 'Cilindro neumático',
         },
         cardBg: 'cylinder-bg.jpg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
+        text: `A demo app developed to make easier cylinder homologations, an engineer can take measures of a cylinder and the app compares between the original model and the selected cylinder series. It was developed to help the proccess and also to display a simplified comparison between the original cylinder and the homologation. I'm currently working in a more advanced version`,
         techList: [
           {
             name: 'html5',
@@ -39,8 +38,7 @@ export default (req, res) => {
           alt: 'Cilindro neumático',
         },
         cardBg: 'cylinder-bg.jpg',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
+        text: `An app developed as a custom html code generator, it was made to generate a code from a simple interface so any user without a previous knowledge could generate a code that's being used in a Shopify project`,
         techList: [
           {
             name: 'nextjs',

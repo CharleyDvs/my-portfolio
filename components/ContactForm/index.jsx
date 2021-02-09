@@ -9,13 +9,15 @@ const ContactForm = () => {
       [e.target.name]: e.target.value,
     })
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    axios({
-      method: 'post',
-      url: 'htttps://localhost:3000/api/sendData',
+    const response = await axios({
+      method: 'POSt',
+      url: './api/sendData',
       data: formData,
     })
+    console.log('working')
+    console.log(response)
   }
   return (
     <form onSubmit={(e) => handleSubmit(e)}>

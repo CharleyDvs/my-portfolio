@@ -152,6 +152,7 @@
           height: 100px;
           width: 80%;
           overflow: hidden;
+          margin: 2px;
           .tech-list {
             display: flex;
             height: 100px;
@@ -169,7 +170,7 @@
           display: flex;
           width: auto;
           height: 48px;
-          margin: 48px auto;
+          margin: 12px auto;
           button {
             margin: 0 16px;
             background-color: transparent;
