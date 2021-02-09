@@ -56,3 +56,22 @@ header {
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  header {
+    justify-content: center;
+    align-items: center;
+    .img-container {
+      display: none;
+    }
+    .bg-container {
+      display: none;
+    }
+    .txt-container {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: none;
+    }
+  }
+}

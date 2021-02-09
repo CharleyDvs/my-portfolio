@@ -52,3 +52,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .section-header {
+    padding: 0 10px;
+    .line {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.hamburguer-menu-container {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .hamburguer-menu-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 15;
+    position: fixed;
+    .menu-icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      pointer-events: all;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      color: $white-color;
+      cursor: pointer;
+      svg {
+        transform: scale(1.4);
+      }
+    }
+    .menu-wrapper {
+      position: fixed;
+      background-color: $secondary-color;
+      height: 100vh;
+      width: 100vw;
+      top: -100vh;
+      transition: $ease;
+      z-index: 20;
+      overflow: hidden;
+      pointer-events: all;
+      .menu-container {
+        position: fixed;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        z-index: 25;
+        top: -110vh;
+        transition: $ease;
+        transition-delay: 0.2s;
+        background-color: $main-bg-color;
+        box-shadow: 15px 15px 15px #222;
+        overflow: hidden;
+        .menu-close-container {
+          position: absolute;
+          right: 48px;
+          bottom: 48px;
+          opacity: 0.5;
+          transform: scale(1.5);
+          transition: $ease;
+          cursor: pointer;
+          &:hover {
+            transform: scale(2);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .menu-wrapper.active {
+      top: 0;
+      box-shadow: 15px 15px 15px #222;
+      .menu-container {
+        top: 0;
+      }
+    }
+  }
+}

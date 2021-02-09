@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header/'
+import HamburguerMenu from '../components/HamburguerMenu'
 import Sidemenu from '../components/Sidemenu'
 import About from '../components/About'
 import Projects from '../components/Projects'
@@ -15,6 +16,7 @@ export default function Home() {
         <title>Jaime Yerena | Web developer</title>
       </Head>
       <main>
+        <HamburguerMenu />
         <Sidemenu />
         <Header />
         <About />

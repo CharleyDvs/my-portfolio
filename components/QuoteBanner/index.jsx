@@ -15,7 +15,8 @@ const QuoteBanner = () => {
           <p>
             I'm always striving to get better at web technologies specially with
             front-end technologies, always trying to learn the most recent
-            trends to eventually achieve mastery to forge epic experiences
+            trends to eventually achieve mastery in order{' '}
+            <b>to forge epic experiences</b>
           </p>
         </EnterWhenVisible>
       </div>
