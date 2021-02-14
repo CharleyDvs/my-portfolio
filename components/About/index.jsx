@@ -1,12 +1,15 @@
 import React from 'react'
 import TitleContainer from '../TitleContainer'
+import Logo from '../EpicForgeLogo'
 
 const About = () => {
   return (
     <section id="about-me" className="about left">
       <TitleContainer number="01" text1="About" text2="me" align="left" />
       <div className="section-content">
-        <div className="images-container"></div>
+        <div className="images-container">
+          <Logo />
+        </div>
         <div className="txt-container">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magnam

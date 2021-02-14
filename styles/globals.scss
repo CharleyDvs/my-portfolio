@@ -8,7 +8,7 @@ $ease: all ease 0.5s;
 
 // Colors
 
-$main-bg-color: #2a3740;
+$main-bg-color: #222;
 $secondary-color: #006d68;
 $light-secondary-color: #41d9ae;
 $white-color: #dfdfdf;
@@ -63,6 +63,7 @@ button {
   }
 }
 
+@import './logo';
 @import './spinner';
 @import './sectionTitle';
 @import './hamburguerMenu';

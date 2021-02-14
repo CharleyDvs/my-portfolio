@@ -1,0 +1,21 @@
+.logo {
+  position: relative;
+  color: $white-color;
+  width: 200px;
+  height: 200px;
+  .anvil,
+  .code {
+    position: absolute;
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+  }
+  .anvil {
+    transform: scale(15);
+  }
+  .code {
+    transform: scale(4) translate(6px, 5px);
+    color: $light-secondary-color;
+    opacity: 1;
+  }
+}

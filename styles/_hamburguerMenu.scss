@@ -23,9 +23,18 @@
       pointer-events: all;
       background-color: rgba($color: #000000, $alpha: 0.5);
       color: $white-color;
+      transition: $ease;
       cursor: pointer;
       svg {
         transform: scale(1.4);
+        transition: $ease;
+      }
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.9);
+        svg {
+          transform: scale(1.4) rotate(90deg);
+          color: $light-secondary-color;
+        }
       }
     }
     .menu-wrapper {
@@ -41,6 +50,8 @@
       .menu-container {
         position: fixed;
         display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100vh;
         width: 100vw;
         z-index: 25;
@@ -48,11 +59,31 @@
         transition: $ease;
         transition-delay: 0.2s;
         background-color: $main-bg-color;
-        box-shadow: 15px 15px 15px #222;
+        box-shadow: 15px 15px 15px #000;
         overflow: hidden;
+        nav {
+          ul {
+            list-style: none;
+            li {
+              font-size: 2rem;
+              font-weight: 500;
+              opacity: 0.5;
+              transition: $ease;
+              margin: 5px;
+              cursor: pointer;
+              &:hover {
+                opacity: 1;
+                transform: scale(1.5);
+                color: $secondary-color;
+              }
+            }
+          }
+        }
         .menu-close-container {
           position: absolute;
-          right: 48px;
+          display: flex;
+          flex-direction: column;
+          right: 64px;
           bottom: 48px;
           opacity: 0.5;
           transform: scale(1.5);
@@ -61,6 +92,7 @@
           &:hover {
             transform: scale(2);
             opacity: 1;
+            color: $secondary-color;
           }
         }
       }

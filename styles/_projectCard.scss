@@ -221,3 +221,17 @@
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .project-container.active {
+    h2,
+    .tech-stack-list,
+    .project-img-container {
+      display: none;
+    }
+    .back-btn {
+      bottom: 8px;
+      left: 12px;
+    }
+  }
+}
