@@ -24,7 +24,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta httpEquiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en"></meta>
+        <meta
+          name="description"
+          content="Self taught Web Developer and Mechanical Engineer"
+        ></meta>
+        <meta name="author" content="Jaime Yerena"></meta>
         <title>Jaime Yerena | Web developer</title>
       </Head>
       <main>
