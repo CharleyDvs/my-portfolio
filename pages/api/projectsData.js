@@ -81,8 +81,8 @@ export default (req, res) => {
             height: '50px',
           },
         ],
-        siteUrl: '/#',
-        repositoryUrl: '/#',
+        siteUrl: 'https://epicforge.dev/',
+        repositoryUrl: 'https://github.com/CharleyDvs/my-portfolio',
       },
     ],
     engineeringProjects: [
