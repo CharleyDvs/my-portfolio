@@ -22,7 +22,12 @@ const About = () => {
             Express, I would like to eventually work as full-stack developer,
             tough I would like to focus mainly with React and the MERN stack.
           </p>
-          <p>As a Mechanical Engineer I work mainly designing and developing</p>
+          <p>
+            As a Mechanical Engineer I work mainly designing and developing
+            automation process using pneumatic and electropneumatic
+            technologies. Eventually I would like to combine my knowledge in
+            both fields to develop integral IoT projects.
+          </p>
         </div>
       </div>
     </section>
