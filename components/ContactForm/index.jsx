@@ -11,13 +11,17 @@ const ContactForm = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = await axios({
-      method: 'POSt',
-      url: './api/sendData',
-      data: formData,
-    })
-    console.log('working')
-    console.log(response)
+
+    try {
+      const response = await axios({
+        method: 'POSt',
+        url: './api/sendData',
+        data: { ...formData },
+      })
+      alert('Sus datos han sido enviados, ¡Gracias!')
+    } catch (err) {
+      alert('Ha ocurrido un error, intente más tarde')
+    }
   }
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
@@ -64,6 +68,7 @@ const ContactForm = () => {
         />
         <label htmlFor="message">Message</label>
       </div>
+
       <button type="submit">Send</button>
     </form>
   )

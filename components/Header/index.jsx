@@ -1,23 +1,9 @@
-import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import { motion } from 'framer-motion'
 import { animationVariants } from '../../animations/animationVariants'
 
-const Header = () => {
-  const [scroll, setScroll] = useState(0)
-  useEffect(() => {
-    const handleScroll = () => {
-      const yOffset = window.pageYOffset
-      if (scroll < 500) {
-        setScroll(yOffset)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+const Header = ({ scroll }) => {
   return (
     <header id="home">
       <div className="bg-container"></div>

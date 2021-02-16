@@ -12,19 +12,17 @@ const About = () => {
         </div>
         <div className="txt-container">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magnam
-            neque est, suscipit ad minima asperiores fugiat aperiam repudiandae
-            consequatur <b>nostrum harum adipisci rerum</b> veniam, dolor ea
-            omnis architecto alias.
+            I'm a <em>self-taught Web Developer and Mechanical Engineer</em>, I
+            love to learn about new technologies and to stay up to date to the
+            current thrends.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
-            <em>
-              Laudantium qui, earum nihil corporis deserunt harum possimus cum
-              aperiam maxime placeat at itaque ullam nostrum voluptate odit
-              consequuntur odio illum perspiciatis?
-            </em>
+            As a Web Developer I have experience mainly working at the front end
+            but I had also worked with back-end technologies like Node and
+            Express, I would like to eventually work as full-stack developer,
+            tough I would like to focus mainly with React and the MERN stack.
           </p>
+          <p>As a Mechanical Engineer I work mainly designing and developing</p>
         </div>
       </div>
     </section>

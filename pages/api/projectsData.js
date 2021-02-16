@@ -32,12 +32,12 @@ export default (req, res) => {
       {
         title: 'Html Generator',
         imageLogo: {
-          src: '/images/cylinder-smc.png',
+          src: '/images/html-logo.png',
           width: '250px',
           height: '165px',
-          alt: 'Cilindro neumático',
+          alt: 'Logo html',
         },
-        cardBg: 'cylinder-bg.jpg',
+        cardBg: 'html-gen-bg.jpg',
         text: `An app developed as a custom html code generator, it was made to generate a code from a simple interface so any user without a previous knowledge could generate a code that's being used in a Shopify project`,
         techList: [
           {
@@ -53,31 +53,31 @@ export default (req, res) => {
             height: '50px',
           },
         ],
-        siteUrl: '/#',
-        repositoryUrl: '/#',
+        siteUrl: 'https://html-generator.vercel.app/',
+        repositoryUrl: 'https://github.com/CharleyDvs/HtmlGenerator',
       },
       {
-        title: 'Project 3',
+        title: 'This site',
         imageLogo: {
-          src: '/images/cylinder-smc.png',
+          src: '/images/hawk-mini.png',
           width: '250px',
           height: '165px',
-          alt: 'Cilindro neumático',
+          alt: 'Halcón volando',
         },
-        cardBg: 'cylinder-bg.jpg',
+        cardBg: 'portfolio-bg.jpg',
         text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
+          'This site was made to familiarize with Next.js and Framer motion library, it was developed to show some of my skills and I planned to actualize it as I keep learning more technologies ',
         techList: [
           {
-            name: 'html5',
+            name: 'nextjs',
             height: '50px',
           },
           {
-            name: 'css3',
+            name: 'react',
             height: '50px',
           },
           {
-            name: 'javascript',
+            name: 'sass',
             height: '50px',
           },
         ],

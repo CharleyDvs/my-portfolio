@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
+import { useInView } from 'react-intersection-observer'
 
 import EnterWhenVisible from '../../hoc/EnterWhenVisible'
 
-const QuoteBanner = () => {
+const QuoteBanner = ({ scroll }) => {
+  const [ref, inView] = useInView()
   return (
     <div className="banner">
       <div className="bg-container"></div>
-      <div className="img-container">
+      <div ref={ref} className={`img-container ${inView ? 'move' : ''}`}>
         <Image src="/images/hawk-2.png" width="250px" height="150px" />
       </div>
       <div className="txt-container">

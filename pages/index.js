@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Header from '../components/Header/'
 import HamburguerMenu from '../components/HamburguerMenu'
@@ -9,6 +10,17 @@ import Techs from '../components/Techs'
 import Contact from '../components/Contact'
 
 export default function Home() {
+  const [scroll, setScroll] = useState(0)
+  useEffect(() => {
+    const handleScroll = () => {
+      const yOffset = window.pageYOffset
+      setScroll(yOffset)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <>
       <Head>
@@ -18,7 +30,7 @@ export default function Home() {
       <main>
         <HamburguerMenu />
         <Sidemenu />
-        <Header />
+        <Header scroll={scroll} />
         <About />
         <Projects />
         <QuoteBanner />

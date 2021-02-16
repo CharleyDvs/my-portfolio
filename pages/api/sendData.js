@@ -1,4 +1,5 @@
 import Cors from 'cors'
+import { addData } from '../../db/index'
 
 // Initializing the cors middleware
 const cors = Cors({
@@ -23,8 +24,8 @@ async function handler(req, res) {
   // Run the middleware
   await runMiddleware(req, res, cors)
 
-  // Rest of the API logic
-  res.status(200).json({ data: req.data })
+  const result = await addData(req.body)
+  res.status(200).json({ data: result })
 }
 
 export default handler
