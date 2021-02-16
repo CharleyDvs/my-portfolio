@@ -11,7 +11,7 @@ const Techs = () => {
   useEffect(() => {
     const getInitialData = async () => {
       const response = await axios.get(
-        'http://localhost:3000/api/techStackData'
+        'https://epicforge.dev/api/techStackData'
       )
       const data = response.data
       setTechStackData(data)

@@ -13,7 +13,7 @@ const Projects = () => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     const getInitialData = async () => {
-      const response = await axios.get('http://localhost:3000/api/projectsData')
+      const response = await axios.get('https://epicforge.dev/api/projectsData')
       const data = response.data
       setProjectsData(data)
       setLoading(false)
