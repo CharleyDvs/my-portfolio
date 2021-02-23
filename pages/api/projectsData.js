@@ -41,7 +41,7 @@ export default (req, res) => {
         text: `An app developed as a custom Html code generator, it was made to generate a code from a simple interface so any user without a previous knowledge could generate a code that's being used in a Shopify project`,
         techList: [
           {
-            name: 'nextjs',
+            name: 'next',
             height: '50px',
           },
           {
@@ -69,7 +69,7 @@ export default (req, res) => {
           'I made this site to familiarize with Next.js and the Framer motion library, it was developed to show some of my skills and I plan to actualize it as I keep learning more technologies.',
         techList: [
           {
-            name: 'nextjs',
+            name: 'next',
             height: '50px',
           },
           {

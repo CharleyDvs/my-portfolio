@@ -60,13 +60,13 @@ const ProjectCard = ({
                     <TechList logoList={techList} keyGen={name} />
                   </div>
                   <div className="btn-container">
-                    <a target="_blank" href={siteUrl}>
+                    <a rel="noreferrer" target="_blank" href={siteUrl}>
                       <button>
                         <FaRegWindowMaximize />
                         Visit site
                       </button>
                     </a>
-                    <a target="_blank" href={repositoryUrl}>
+                    <a rel="noreferrer" target="_blank" href={repositoryUrl}>
                       <button>
                         <FaGithub />
                         View code

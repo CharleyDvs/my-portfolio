@@ -10,6 +10,7 @@ function TechList({ logoList, keyGen }) {
             src={`/logos/${logo.name}-logo.svg`}
             height={logo.height}
             width="auto"
+            alt={`${logo.name} logo`}
           />
           <div className="txt-container">
             <span>{logo.name}</span>

@@ -33,7 +33,7 @@ export default (req, res) => {
         height: '150px',
       },
       {
-        name: 'nextjs',
+        name: 'next',
         height: '150px',
       },
     ],
