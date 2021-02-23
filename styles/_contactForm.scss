@@ -24,7 +24,7 @@ form {
   }
   .input-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 16px auto;
     width: 80%;
     position: relative;
@@ -41,8 +41,8 @@ form {
       border: none;
       border-bottom: 2px solid $secondary-color;
       color: $white-color;
-      &:focus ~ label,
-      &:valid ~ label {
+      &:focus + label,
+      &:valid + label {
         left: 0;
         bottom: 20px;
         transform: scale(0.8);
@@ -52,11 +52,11 @@ form {
     textarea {
       border: 2px solid $secondary-color;
       height: 56px;
-      & ~ label {
+      & + label {
         top: 0;
       }
-      &:focus ~ label,
-      &:valid ~ label {
+      &:focus + label,
+      &:valid + label {
         top: -32px;
       }
     }
