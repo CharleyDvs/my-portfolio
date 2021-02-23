@@ -224,6 +224,7 @@
 
 @media only screen and (max-width: 800px) {
   .project-container.active {
+    overflow: scroll;
     h2,
     .tech-stack-list,
     .project-img-container {
