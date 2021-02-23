@@ -172,7 +172,7 @@
           height: 48px;
           margin: 12px auto;
           button {
-            margin: 0 16px;
+            margin: 6px 16px;
             background-color: transparent;
             border: 2px solid $secondary-color;
             color: $secondary-color;
@@ -224,15 +224,28 @@
 
 @media only screen and (max-width: 800px) {
   .project-container.active {
-    overflow: scroll;
+    .project-info-container {
+      height: 100%;
+      width: 100%;
+      margin: 5px;
+      p {
+        max-width: 90%;
+      }
+      .btn-container {
+        flex-direction: column;
+        height: fit-content;
+        button {
+        }
+      }
+    }
     h2,
     .tech-stack-list,
     .project-img-container {
       display: none;
     }
     .back-btn {
-      bottom: 8px;
-      left: 12px;
+      top: 8px;
+      right: 8px;
     }
   }
 }
