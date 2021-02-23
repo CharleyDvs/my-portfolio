@@ -15,7 +15,7 @@ const ContactForm = () => {
     try {
       const response = await axios({
         method: 'POSt',
-        url: './api/sendData',
+        url: 'https://epicforge.dev/api/sendData',
         data: { ...formData },
       })
       alert('Sus datos han sido enviados, ¡Gracias!')
