@@ -11,7 +11,7 @@ export default (req, res) => {
           alt: 'Cilindro neumático',
         },
         cardBg: 'cylinder-bg.jpg',
-        text: `A demo app developed to make easier cylinder homologations, an engineer can take measures of a cylinder and the app compares between the original model and the selected cylinder series. It was developed to help the proccess and also to display a simplified comparison between the original cylinder and the homologation. I'm currently working in a more advanced version`,
+        text: `A demo app developed to make easier cylinder homologations, an engineer can take measures of a cylinder and the app compares between the original model and the selected cylinder series. It was developed to help the proccess and also to display a simplified comparison between the original cylinder and the homologation. I'm currently working in a more advanced version.`,
         techList: [
           {
             name: 'html5',
@@ -38,7 +38,7 @@ export default (req, res) => {
           alt: 'Logo html',
         },
         cardBg: 'html-gen-bg.jpg',
-        text: `An app developed as a custom html code generator, it was made to generate a code from a simple interface so any user without a previous knowledge could generate a code that's being used in a Shopify project`,
+        text: `An app developed as a custom Html code generator, it was made to generate a code from a simple interface so any user without a previous knowledge could generate a code that's being used in a Shopify project`,
         techList: [
           {
             name: 'nextjs',
@@ -66,7 +66,7 @@ export default (req, res) => {
         },
         cardBg: 'portfolio-bg.jpg',
         text:
-          'This site was made to familiarize with Next.js and Framer motion library, it was developed to show some of my skills and I planned to actualize it as I keep learning more technologies ',
+          'I made this site to familiarize with Next.js and the Framer motion library, it was developed to show some of my skills and I plan to actualize it as I keep learning more technologies.',
         techList: [
           {
             name: 'nextjs',
