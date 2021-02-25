@@ -87,7 +87,7 @@ export default (req, res) => {
     ],
     engineeringProjects: [
       {
-        title: 'Project 1',
+        title: 'Motor alternate start',
         imageLogo: {
           src: '/images/cylinder-smc.png',
           width: '250px',
@@ -96,12 +96,13 @@ export default (req, res) => {
         },
         cardBg: 'cylinder-bg.jpg',
         text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
-        siteUrl: '/#',
+          'This design was developed to be used with a set of three compressors in order to share the workload. Once a pressure switch gives the signal each motor starts in an alternating manner.',
+        siteUrl:
+          'https://www.dropbox.com/s/yv54qswq1fdk0pw/alternate-start.pdf?dl=0',
         repositoryUrl: '/#',
       },
       {
-        title: 'Project 2',
+        title: 'Pneumatic cable cutter',
         imageLogo: {
           src: '/images/cylinder-smc.png',
           width: '250px',
@@ -110,8 +111,9 @@ export default (req, res) => {
         },
         cardBg: 'cylinder-bg.jpg',
         text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vel! Fuga dolorem voluptatum, possimus odit harum accusamus ex mollitia animi officia obcaecati, ullam error similique sunt amet repellendus, eius nisi.',
-        siteUrl: '/#',
+          'An automated procces made using electropneumatic technologies. A system developed to cut cables using a gripper, a rodless actuator and a cylinder with a blade mounted.',
+        siteUrl:
+          'https://www.dropbox.com/s/4zelid4fjdqbbsv/pneumatic-cable-cutter.pdf?dl=0',
         repositoryUrl: '/#',
       },
     ],
