@@ -77,10 +77,12 @@ const ProjectCard = ({
               ) : (
                 <>
                   <div className="btn-container">
-                    <button>
-                      <FaWrench />
-                      View diagram
-                    </button>
+                    <a rel="noreferrer" target="_blank" href={siteUrl}>
+                      <button>
+                        <FaWrench />
+                        View diagram
+                      </button>
+                    </a>
                   </div>
                 </>
               )}
