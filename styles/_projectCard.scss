@@ -234,8 +234,6 @@
       .btn-container {
         flex-direction: column;
         height: fit-content;
-        button {
-        }
       }
     }
     h2,
@@ -246,6 +244,7 @@
     .back-btn {
       top: 4px;
       right: 4px;
+      flex-direction: row;
     }
   }
 }
