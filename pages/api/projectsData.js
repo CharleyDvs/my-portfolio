@@ -8,7 +8,7 @@ export default (req, res) => {
           src: '/images/cylinder-smc.png',
           width: '250px',
           height: '165px',
-          alt: 'Cilindro neumático',
+          alt: 'Pneumatic Cylinder',
         },
         cardBg: 'cylinder-bg.jpg',
         text: `A demo app developed to make easier cylinder homologations, an engineer can take measures of a cylinder and the app compares between the original model and the selected cylinder series. It was developed to help the proccess and also to display a simplified comparison between the original cylinder and the homologation. I'm currently working in a more advanced version.`,
@@ -35,7 +35,7 @@ export default (req, res) => {
           src: '/images/html-logo.png',
           width: '250px',
           height: '165px',
-          alt: 'Logo html',
+          alt: 'Html logo',
         },
         cardBg: 'html-gen-bg.jpg',
         text: `An app developed as a custom Html code generator, it was made to generate a code from a simple interface so any user without a previous knowledge could generate a code that's being used in a Shopify project`,
@@ -62,7 +62,7 @@ export default (req, res) => {
           src: '/images/hawk-mini.png',
           width: '250px',
           height: '165px',
-          alt: 'Halcón volando',
+          alt: 'Falcon flying',
         },
         cardBg: 'portfolio-bg.jpg',
         text:
@@ -104,12 +104,12 @@ export default (req, res) => {
       {
         title: 'Pneumatic cable cutter',
         imageLogo: {
-          src: '/images/cylinder-smc.png',
+          src: '/images/gripper.png',
           width: '250px',
           height: '165px',
-          alt: 'Cilindro neumático',
+          alt: 'Pneumatic gripper',
         },
-        cardBg: 'cylinder-bg.jpg',
+        cardBg: 'cutter-bg.jpg',
         text:
           'An automated procces made using electropneumatic technologies. A system developed to cut cables using a gripper, a rodless actuator and a cylinder with a blade mounted.',
         siteUrl:
