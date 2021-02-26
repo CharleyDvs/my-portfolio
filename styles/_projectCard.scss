@@ -203,6 +203,9 @@
           opacity: 0.5;
           transition: $ease;
           cursor: pointer;
+          span {
+            display: none;
+          }
           &:hover {
             opacity: 1;
           }
