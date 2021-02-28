@@ -8,6 +8,7 @@ import Projects from '../components/Projects'
 import QuoteBanner from '../components/QuoteBanner'
 import Techs from '../components/Techs'
 import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 
 export default function Home() {
   const [scroll, setScroll] = useState(0)
@@ -41,6 +42,7 @@ export default function Home() {
         <QuoteBanner />
         <Techs />
         <Contact />
+        <Footer />
       </main>
     </>
   )

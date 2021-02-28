@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 20vh;
+  .social-links-container {
+    display: flex;
+    justify-content: space-between;
+    width: 64px;
+    margin: 5px;
+    svg {
+      transform: scale(2);
+      opacity: 0.5;
+      transition: $ease;
+      &:hover {
+        opacity: 1;
+        transform: scale(2.2);
+      }
+    }
+  }
+}
