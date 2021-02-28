@@ -89,12 +89,12 @@ export default (req, res) => {
       {
         title: 'Motor alternate start',
         imageLogo: {
-          src: '/images/cylinder-smc.png',
+          src: '/images/compressor.png',
           width: '250px',
           height: '165px',
-          alt: 'Cilindro neumático',
+          alt: 'Compressor',
         },
-        cardBg: 'cylinder-bg.jpg',
+        cardBg: 'alternate-bg.jpg',
         text:
           'This design was developed to be used with a set of three compressors in order to share the workload. Once a pressure switch gives the signal each motor starts in an alternating manner.',
         siteUrl:
@@ -111,7 +111,7 @@ export default (req, res) => {
         },
         cardBg: 'cutter-bg.jpg',
         text:
-          'An automated procces made using electropneumatic technologies. A system developed to cut cables using a gripper, a rodless actuator and a cylinder with a blade mounted.',
+          'An automated proccess made using electropneumatic technologies. A system developed to cut cables using a gripper, a rodless actuator and a cylinder with a blade mounted.',
         siteUrl:
           'https://www.dropbox.com/s/4zelid4fjdqbbsv/pneumatic-cable-cutter.pdf?dl=0',
         repositoryUrl: '/#',

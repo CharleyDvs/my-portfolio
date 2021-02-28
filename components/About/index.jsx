@@ -12,19 +12,23 @@ const About = () => {
         </div>
         <div className="txt-container">
           <p>
-            I'm a <em>self-taught Web Developer and Mechanical Engineer</em>, I
-            love to learn about new technologies and to stay up to date to the
-            current thrends.
+            I'm a{' '}
+            <em>
+              <b>self-taught Web Developer and Mechanical Engineer</b>
+            </em>
+            , I love to learn about new technologies and to stay up to date to
+            the current trends.
           </p>
           <p>
-            As a Web Developer I have experience mainly working at the front end
-            but I had also worked with back-end technologies like Node and
-            Express, I would like to eventually work as full-stack developer,
-            tough I would like to focus mainly with React and the MERN stack.
+            As a <b>Web Developer</b> I have experience mainly working at the
+            front-end but I had also worked with back-end technologies like Node
+            and Express, I would like to eventually work as a full-stack
+            developer, though I would like to focus mainly in React and the MERN
+            stack.
           </p>
           <p>
-            As a Mechanical Engineer I work mainly designing and developing
-            automation process using pneumatic and electropneumatic
+            As a <b>Mechanical Engineer</b> I work designing and developing
+            automation proccess using pneumatic and electropneumatic
             technologies. Eventually I would like to combine my knowledge in
             both fields to develop integral IoT projects.
           </p>

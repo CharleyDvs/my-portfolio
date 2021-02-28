@@ -15,7 +15,7 @@ const QuoteBanner = ({ scroll }) => {
       <div className="txt-container">
         <EnterWhenVisible>
           <p>
-            I'm always striving to get better at web technologies specially with
+            I'm always striving to get better at web develoment specially with
             front-end technologies, always trying to learn the most recent
             trends to eventually achieve mastery in order{' '}
             <b>to forge epic experiences</b>
